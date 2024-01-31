@@ -27,7 +27,7 @@ export function CreateProductDialog() {
     <DialogContent>
       <DialogHeader>
         <DialogTitle>Novo produto</DialogTitle>
-        <DialogDescription>Criar um novo produto</DialogDescription>
+        <DialogDescription>Preencha para criar um novo produto</DialogDescription>
       </DialogHeader>
 
       <form className="space-y-6" onSubmit={handleSubmit(handleCreateProduct)}>
@@ -42,7 +42,7 @@ export function CreateProductDialog() {
         </div>
 
         <DialogFooter>
-          <DialogClose aschield>
+          <DialogClose asChild>
             <Button type="button" variant="outline">Cancelar</Button>
           </DialogClose>
           <Button type="submit">Savar</Button>

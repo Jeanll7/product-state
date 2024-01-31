@@ -16,8 +16,15 @@ type ProductsFiltersSchema = z.infer<typeof productsFiltersSchema>
 export function ProductsFilters() {
   const [searchParams, setSearchParams] = useSearchParams()
 
+  const id = searchParams.get('id')
+  const name = searchParams.get('name')
+
   const { register, handleSubmit } = useForm<ProductsFiltersSchema >({
     resolver: zodResolver(productsFiltersSchema),
+    values : {
+      id: id ?? '',
+      name: name ?? '',
+    }
   })
 
   function handleFilterProduct({ id, name }: ProductsFiltersSchema ) {
